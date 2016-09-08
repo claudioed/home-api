@@ -1,0 +1,10 @@
+{
+    "env": {
+        "node": true,
+        "mocha": true
+    },
+    "rules": {
+        "max-len": [2, 120, 2]
+    },
+    "extends": "google"
+}

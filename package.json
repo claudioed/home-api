@@ -1,0 +1,36 @@
+{
+  "name": "home",
+  "version": "0.0.1",
+  "description": "Home insights API",
+  "main": "server.js",
+  "dependencies": {
+    "bunyan": "1.8.1",
+    "foreman": "1.4.1",
+    "forever": "0.15.1",
+    "glob": "7.0.0",
+    "lodash": "4.5.0",
+    "mongoose": "4.4.10",
+    "nodemon": "1.9.1",
+    "path": "0.12.7",
+    "q": "^1.4.1",
+    "restify": "4.0.4"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "eslint": "2.4.0",
+    "eslint-config-google": "0.4.0",
+    "mocha": "2.4.5",
+    "supertest": "1.2.0"
+  },
+  "scripts": {
+    "start": "nf start db,api-dev",
+    "prod": "nf start db,api-prod",
+    "nodemon": "nodemon -e js -w . -x 'npm run lint-js && node server.js'",
+    "forever": "forever server.js",
+    "lint-js": "eslint server.js config modules; exit 0",
+    "test": "mocha ./**/*.spec.js; exit 0"
+  },
+  "keywords": "home,automation,insights",
+  "author": "Claudio E. de Oliveira<claudioed.olivera@gmail.com>",
+  "license": "ISC"
+}
